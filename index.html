@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARVEL MOVIES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .body{
+            background-color:rgb(29, 29, 29);
+        }
+        nav{
+            display: flex;
+            background-color:  #282626;
+            height: 60px;
+            width: 100%;
+            padding-top: 6px;
+        }
+        nav div{
+            margin-left: 40%;
+        }
+        
+        nav ul li{
+            display: inline-block;
+        }
+        nav ul li i{
+            color: rgb(39, 187, 39);
+            margin-left: 5px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: #fff;
+            margin: 10px;
+            font-weight: lighter;
+            font-size: medium;
+            font-family: sans-serif;
+        }
+        .search{
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            margin-top: 5px;
+            margin-left: 30px;
+            height: 40px;
+            width: 250px;
+            background-color:#322e2e;
+            border:0.5px rgb(68, 64, 64) solid;
+           
+        }
+        .searchbutton{
+            border:0.5px rgb(68, 64, 64) solid;
+            height: 40px;
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 30px;
+            margin-top: 4px;
+            width: 40px;
+            background-color: rgb(29, 185, 29);
+        }
+        .searchimage{
+            mix-blend-mode: multiply;
+            height: 25px;
+            width: 25px;
+            margin-top: 6px;
+            margin-left: 6px;
+        }
+        h1{
+            color: white;
+            margin-top: 40px;
+            line-height: 100px;
+            font-size: 55px;
+            font-weight: lighter;
+        }
+        .p1{
+            color: rgb(187, 184, 184);
+            font-weight: lighter;
+            line-height: 2px;
+            font-size: 22px;
+            margin-top: -10px;
+        }
+        .p2{
+            color: rgb(187, 184, 184);
+            font-weight: lighter;
+            font-size: 22px;
+            line-height: 12px;
+        }
+        center p{
+            color: rgb(39, 187, 39);
+            font-size: 20px;
+        }
+        center span a{
+            color: rgb(187, 184, 184);
+            font-weight: lighter;
+            font-size: 16px;
+            margin-left: 5px;
+            text-decoration: none;
+        }
+       
+       .movies{
+           display: grid;
+           grid-template-columns: auto auto auto auto auto auto;
+           margin-left: 40px;
+           width: 95%;
+           justify-content: space-between;
+       }
+       .images{
+          margin-left: 4px;
+          margin-top: 5px;
+          height: 360px;
+          width: 230px;
+       }
+       .movies a{
+          text-decoration: none;
+          font-size: 18px;
+          color: white;
+          font-weight: 20px;
+          font-family: sans-serif;
+       }
+       .years{
+          color: rgb(239, 235, 235);
+          margin-top: -10px;
+          font-size: 18px;
+       }
+       .search-container{
+          height: 250px;
+          width: 92%;
+          background-color: #282626;
+          margin-left: 63px;
+          margin-top: 20px;
+          border:0.5px rgb(68, 64, 64) solid;
+       }
+       .search-container h1{
+          font-size: 32px;
+          font-weight: bold;
+       }
+       .search-container p{
+            color: rgb(209, 205, 205);
+            font-size: large;
+            font-weight: lighter;
+            margin-top: -33px;
+       }
+       .space{
+        margin-top: 30px;
+       }
+       .search1{
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            height: 41px;
+            width: 600px;
+            margin-left: 385px;
+            background-color:#322e2e;
+            border:0.5px rgb(68, 64, 64) solid;
+       }
+       .searchbutton1{
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 30px;
+            background-color: rgb(29, 185, 29);
+            height: 40px;
+            width: 130px;
+            position: relative;
+            left: 64%;
+            margin-top: -40px;
+        }
+        .searchimage1{
+            mix-blend-mode: multiply;
+            height: 25px;
+            width: 25px;
+            margin-top: 4.5px;
+           margin-left: 40px;
+        }
+        .webseries{
+            margin-top: 20px;
+        }
+        .wifi{
+            height: 60px;
+            width: 60px;
+            margin-left: 40px;
+        }
+        .webseries h2{
+            color: white;
+            font-size: xx-large;
+            margin-left: 120px;
+            margin-top: -45px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .footer{
+            display: flex;
+            background-color: #282626;
+            height: 80px;
+            width: 98%;
+            align-items: center;
+            padding-left: 70px;
+            text-decoration: none;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .c{
+            margin-right: 70px;
+            color: rgb(83, 80, 80);
+            text-decoration: none;
+        }
+        .footer a{
+            color:rgb(185, 178, 178);
+            font-size: 20px;
+            text-decoration: none;
+        }
+       
+    </style>
+</head>
+<body class="body">
+    <div id="Main-Section">
+        <nav>
+           <img src="https://www.citypng.com/public/uploads/preview/marvel-studios-green-logo-free-png-11662677458ecrgvckanz.png?v=2023052419" height="50px" width="180px" style="margin-left: 50px;" alt="">
+           <div>
+              <ul>
+                 <li><i class="fa-solid fa-user"><span><a href="About1.html">About</a></span></i></li>
+                 <li><i class="fa-solid fa-bug"><span><a href="Bug Report.html">Bug Report</a></span></i></li>
+                 <li><i class="fa-solid fa-envelope"><span><a href="Contact1.html">Contact</a></span></i></li>
+               </ul>
+           </div>
+           <input type="search" name="" id="searching" placeholder="  Search..." class="search" onclick="searchClick1()">
+           <a href="#" class="searchbutton"><img src="search1.jpeg" alt="" class="searchimage"></a>
+        </nav>
+        <center>
+            <h1>Perfect Platform For Marvel Collections</h1>
+            <p class="p1">Watch / download Marvel movies in an excellent quality at the smallest file size.</p>
+            <p class="p2">Exclusively designed & developed for smartphones, tablets and PCs.</p>
+            <br>
+            <p></p>
+            <p><i class="fa-solid fa-star"><span><a href="#"> Beware of FAKE websites , Apps.</a></span></i></p><br>
+            <img src="line2.png" alt="" width="330px" height="40px" style="mix-blend-mode: normal;margin-top: -30px;">
+        </center>
+        <br>
+        <br>
+        <script>
+            function searchClick1(){
+                document.getElementById('searching').style.color="#fff";
+                document.getElementById('searching').style.fontSize="16px";
+            }
+        </script>
+        <div class="movies">
+            <a href="description.html"><img src="https://upload.wikimedia.org/wikipedia/en/0/02/Iron_Man_%282008_film%29_poster.jpg" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiHpd_lgR8hwbxrWH6yzJ86VHcetZnc9EAVgF5jeX1gIIQVMuDStMhor0v4_MUkl5oSQw&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4YfN-dZwP9vcd0bH0QRXXYyfPizStnpJN-EuuiNJnqoqsiBxd2VYN7LWK3apdGYavJuw&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPCJExouv9idYWsPKB_LYjyz6iuAGCbs-0jNbMurPRcVVL-40YfE3Vgl0aEMKf2Rv7V8c&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrD13zTid04oHx9o_ExKozO0LEws30hcAWyQ&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx4az78HUSP0Ltg8hM1SRqQK2A2D3rJkdXUQ&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><h3>Iron Man 1</h3></a>
+            <a href="#"><h3>Iron Man 2</h3></a>
+            <a href="#"><h3>Iron Man 3</h3></a>
+            <a href="#"><h3>Thor Love & Thunder</h3></a>
+            <a href="#"><h3>Captain America</h3></a>
+            <a href="#"> <h3>Hulk</h3></a>
+            <p class="years">2014</p>
+            <p class="years">2015</p>
+            <p class="years">2017</p>
+            <p class="years">2016</p>
+            <p class="years">2015</p>
+            <p class="years">2015</p>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnp8E_VF5k2NoxLX1eOgIoJa2XY-SsgJlDoA&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0Xz6KoDdSARNNAqOh44N6dA3z7UI91CXlgQ&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR46Lib0E6BAB2Vb7ei8XZxwpdFSysc2JA8QLkMbQSCOg_jTKzuMvlVqXCTj7bKMp6ifgg&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsgw6IbZKp-rGSLUZL5bPDTBaDie-uoXZafaxb75HqXWYDc8DMnHV3JeyZXrlVCrfG2UE&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFVwLGyZ-3oPaOviKqkeztbgIKzxlvZNu7hjmgoQO5XTUu9kmu2-_qy7JROUDsvCu94l8&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI6JOenpQK59_fpxHrSoa6gEQRstPO0SrVIhMoSsQ_Ni0zDdXg4vQ_XUoqypcGZJAEewM&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><h3>Spider Man 1</h3></a>
+            <a href="#"><h3>Spider Man 2</h3></a>
+            <a href="#"><h3>Spider Man 3</h3></a>
+            <a href="#"><h3>Doctor Strange</h3></a>
+            <a href="#"><h3>DeadPool 1</h3></a>
+            <a href="#"> <h3>DeadPool 2</h3></a>
+            <p class="years">2015</p>
+            <p class="years">2016</p>
+            <p class="years">2018</p>
+            <p class="years">2014</p>
+            <p class="years">2019</p>
+            <p class="years">2021</p>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyi3-VpAobTYccSKj0Iol-UAt9nBKWBNw_YA&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTk-lVYDx9TktRCZL4KgQSGdnYK5pNuEK6U7ZG0rbRvL3FIXVa6fNS1F0QQ0NcaBqx9NKY&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://xstreamcp-assets-msp.streamready.in/assets/SONYLIV_VOD/MOVIE/6485904d82488153bfe3e4e2/images/Spiderman_homecoming.jpg" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLikTKTqW0sd9NtSeyR36hUBUyaphWjd6fSIN9xINeUjCqsKHESLZwhdwTBuAG8RnXoqE&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0tVQrsFzGCKMZBMMjvrbj2Jep5eoeqemSM0MZpRAykgIV5-UWU-PWuVtQiFZ0_4wML-k&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHoELGDr2cm-7mOb4QrnQl09lEJJJ7IR9MoI9qn5IX7tfWtjcjqMdAl6YAzCdvfTSNxvQ&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><h3>Thor : Ragnorok</h3></a>
+            <a href="#"><h3>Venom 1</h3></a>
+            <a href="#"><h3>Home Coming</h3></a>
+            <a href="#"><h3>Far From Home</h3></a>
+            <a href="#"><h3>No Way Home</h3></a>
+            <a href="#"> <h3>Venom 2</h3></a>
+            <p class="years">2020</p>
+            <p class="years">2018</p>
+            <p class="years">2019</p>
+            <p class="years">2021</p>
+            <p class="years">2022</p>
+            <p class="years">2022</p>
+            <a href="#"><img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2013%2F03%2Fwolverine.jpg&q=60" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRswqf60CcI-CLsD07DkGAl0Rb8EhiTngxdPR1NHiZZ0f7DbiAqWIcZtLnpCZDaTIFS7Q8&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFeAejkw7Dq6Hwz8ibE9BIaXuyGZCgN9aKqPB5ylLaeQ7KSRpG2RTR7JTiLV8rwtWSdvI&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://cdn.shopify.com/s/files/1/0057/3728/3618/products/logan.promo_grande.jpg?v=1616184545" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgU_OJfk8UCGjTcC3hSOn4W1VTFjWYpLBqJHR4VPG_UVpJ74J21a3h6fxTpfixWWrPkLk&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMQzH66RN5I-3F3E83dUT9v71BQ95NMd0XDBmaqIpWi2tg9H5gxLSrS_NWivylu6DiKWo&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><h3>The Wolverine</h3></a>
+            <a href="#"><h3>Black Panther</h3></a>
+            <a href="#"><h3>Wakanda Forever</h3></a>
+            <a href="#"><h3>Logan</h3></a>
+            <a href="#"><h3>Ant Man:Quantamania</h3></a>
+            <a href="#"> <h3>Guardians Of Galaxy</h3></a>
+            <p class="years">2016</p>
+            <p class="years">2015</p>
+            <p class="years">2022</p>
+            <p class="years">2018</p>
+            <p class="years">2022</p>
+            <p class="years">2019</p>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/en/5/53/Captain_America_Civil_War_poster.jpg" alt="" class="images"></a>
+            <a href="#"><img src="https://static.displate.com/857x1200/displate/2021-01-28/50c288197a62a2386ee9ee41f315f352_982fad6a978f26b986ed8f3f733dd843.jpg" alt="" class="images"></a>
+            <a href="#"><img src="https://tommygirard.files.wordpress.com/2015/04/dwv6bz2.jpg" alt="" class="images"></a>
+            <a href="#"><img src="https://c8.alamy.com/comp/RR5MCP/avengers-infinity-war-2018-directed-by-anthony-russo-and-joe-russo-and-starring-robert-downey-jr-chris-evans-mark-ruffalo-chris-hemsworth-and-scarlett-johansson-the-avengers-team-up-with-heroes-across-the-marvel-universe-to-stop-thanos-collecting-the-remaining-infinity-stones-and-destroying-earth-RR5MCP.jpg" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQ8mo8-7_kiqTWkmi04TWhPnkqaTV2M6h6OOfFrb6lGWwVAhw3o5oCGh0GgZyd9yRzEdg&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRuRHHs_q6RQ2uHu-7GdRY6thbtjIPL0_ypw&usqp=CAU" alt="" class="images"></a>
+            <a href="#"><h3>Civi War</h3></a>
+            <a href="#"><h3>Marvel Avengers</h3></a>
+            <a href="#"><h3>Avengers Age Of Ultron</h3></a>
+            <a href="#"><h3>Avengers Infinity War</h3></a>
+            <a href="#"><h3>Avengers End Game</h3></a>
+            <a href="#"> <h3>Thor Love & Thunder</h3></a>
+            <p class="years">2016</p>
+            <p class="years">2017</p>
+            <p class="years">2018</p>
+            <p class="years">2020</p>
+            <p class="years">2022</p>
+            <p class="years">2019</p>
+        </div>
+        <div class="search-container">
+            <center>
+                <h1>Looking For More Movies? Use Our Search</h1>
+                <p>Hundreds of MARVEL MOVIES in our database & still adding</p>
+            </center>
+            <div class="space">
+                <input type="search" name="" id="searching1" placeholder="  Search..." class="search1" onclick="searchClick()">
+                <div class="searchbutton1">
+                    <a href="#"><img src="search1.jpeg" alt="" class="searchimage1"></a>
+                </div>
+            </div>
+        </div>
+        <script>
+            function searchClick(){
+                document.getElementById('searching1').style.color="#fff";
+                document.getElementById('searching1').style.fontSize="16px";
+            }
+        </script>
+        <div class="webseries">
+            <img src="https://www.clker.com/cliparts/a/d/O/c/6/y/green-wifi.svg" alt="" class="wifi">
+            <h2>Web Series</h2>
+            <div class="movies">
+                <a href="#"><img src="https://flxt.tmsimg.com/assets/p19575003_b_v13_aa.jpg" alt="" class="images"></a>
+                <a href="#"><img src="https://static.displate.com/280x392/displate/2021-03-18/196c264b257e25d21c7c13c8df973764_293156b7aacdfdb25ba79d6326503da8.jpg" alt="" class="images"></a>
+                <a href="#"><img src="https://pbs.twimg.com/media/FLLbWEiXIAgiJMm.jpg:large" alt="" class="images"></a>
+                <a href="#"><img src="https://wallpapercave.com/wp/wp7241850.jpg" alt="" class="images"></a>
+                <a href="#"><img src="https://i.redd.it/rg4e90oalwua1.jpg" alt="" class="images"></a>
+                <a href="#"><img src="https://www.leisurebyte.com/wp-content/uploads/2023/02/Farzi-Review.jpg" alt="" class="images"></a>
+                <a href="#"><h3>Loki</h3></a>
+                <a href="#"><h3>Wanda Vision</h3></a>
+                <a href="#"><h3>Secret Invasion</h3></a>
+                <a href="#"><h3>Money Heist</h3></a>
+                <a href="#"><h3>Citadel</h3></a>
+                <a href="#"> <h3>Farzi</h3></a>
+                <p class="years">2021</p>
+                <p class="years">2022</p>
+                <p class="years">2023</p>
+                <p class="years">2015</p>
+                <p class="years">2023</p>
+                <p class="years">2023</p>
+            </div>
+        </div>
+        <div class="webseries">
+            <img src="https://www.clker.com/cliparts/a/d/O/c/6/y/green-wifi.svg" alt="" class="wifi">
+            <h2>Add-ons(O)</h2>
+            <div class="movies">
+                <a href="#"><img src="https://i.pinimg.com/474x/4d/6e/88/4d6e883e3d34cd2b57b0961b42344ef2.jpg" alt="" class="images"></a>
+                <a href="#"><img src="https://lumiere-a.akamaihd.net/v1/images/p_shangchiandthelegendofthetenringshomeentupdate_22055_7b62fa67.jpeg?region=0%2C0%2C540%2C810" alt="" class="images"></a>
+                <a href="#"><img src="https://play-lh.googleusercontent.com/kyp2sHm5j8Wg3ZZoKObeMDylyTzIYJc_WAZJId-EZptCH6nHR-_dHhVrWtUv5wgajI59yLfFJpbYe7u4SVeX" alt="" class="images"></a>
+                <a href="#"><img src="https://pbs.twimg.com/media/FEvB4ZCVIAA4MdA.jpg" alt="" class="images"></a>
+                <a href="#"><img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/captain-marvel-design-template-14f63fe27c1d99e98e43a938f7d17bb4_screen.jpg?ts=1636993163" alt="" class="images"></a>
+                <a href="#"><img src="https://cinematicslant.files.wordpress.com/2021/11/eternals-poster.jpg?w=518" alt="" class="images"></a>
+                <a href="#"><h3>Ghost Rider</h3></a>
+                <a href="#"><h3>Shang Chi</h3></a>
+                <a href="#"><h3>Black Widow</h3></a>
+                <a href="#"><h3>Hawk Eye</h3></a>
+                <a href="#"><h3>Captain Marvel</h3></a>
+                <a href="#"> <h3>Eternals</h3></a>
+                <p class="years">2017</p>
+                <p class="years">2022</p>
+                <p class="years">2018</p>
+                <p class="years">2018</p>
+                <p class="years">2020</p>
+                <p class="years">2022</p>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <a href="#">Contact   |  </a>
+                <a href="#">DMCA  |  </a>
+                <a href="#">T&C</a>
+            </div>
+            <div class="c">
+                <a href="#">@2023 MARVEL</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
